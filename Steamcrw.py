@@ -5,9 +5,9 @@ def cortalinha():
     print('#' * 40)
 
 #Inserção da URLSteam do jogo a ser procurado
-urlsteam = 'https://store.steampowered.com/app/1811260/EA_SPORTS_FIFA_23/'
-jogo = requests.get(urlsteam)
-root = fromstring(jogo.content)
+urlsteam = 'https://store.steampowered.com/app/1811260/EA_SPORTS_FIFA_23/?l=brazilian'
+response = requests.get(urlsteam)
+root = fromstring(response.content)
 
 #extração do nome do jogo
 pathnm = root.xpath('//div[@class="apphub_AppName"]')
